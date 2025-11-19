@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sign up • Hackholics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="h1">Create account</div>
+      <form id="signup-form" class="form-row">
+        <input id="signup-email" class="input" placeholder="Email" type="email" required>
+        <input id="signup-password" class="input" placeholder="Password (6+ chars)" type="password" required>
+        <div style="display:flex;gap:8px;">
+          <button class="btn" type="submit">Sign up</button>
+          <a class="btn" href="login.html">Already have an account?</a>
+        </div>
+        <div id="signup-msg" class="text-muted"></div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>
