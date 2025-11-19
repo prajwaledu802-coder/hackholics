@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login • Hackholics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="h1">Welcome back</div>
+      <form id="login-form" class="form-row">
+        <input id="login-email" class="input" placeholder="Email" type="email" required>
+        <input id="login-password" class="input" placeholder="Password" type="password" required>
+        <div style="display:flex;gap:8px;">
+          <button class="btn" type="submit">Login</button>
+          <a class="btn" href="signup.html">Sign up</a>
+        </div>
+        <div id="login-msg" class="text-muted"></div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>

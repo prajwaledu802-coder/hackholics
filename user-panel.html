@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard • Hackholics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">HK</div>
+        <div>
+          <div class="h1">Dashboard</div>
+          <div id="user-email" class="text-muted">Not signed in</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <button id="logout-btn" class="btn">Logout</button>
+      </nav>
+    </header>
+
+    <main class="grid" style="margin-top:18px;">
+      <section class="widget">
+        <div class="h1" style="font-size:18px">Voice Assistant</div>
+        <div class="text-muted">Click Speak and say “hackholics” or “hi” to wake the bot. Works on Android Chrome too.</div>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button id="speak-btn" class="btn">🎙️ Speak</button>
+          <input id="bot-input" class="input" placeholder="Type a question (or speak)" />
+          <button id="bot-send" class="btn">Ask</button>
+        </div>
+        <div id="bot-output" class="summary" style="margin-top:12px">Bot idle</div>
+
+        <hr style="margin:16px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <div class="h1" style="font-size:18px">Upload notes / PDF</div>
+        <div class="text-muted">Small files only (prototype). PDFs will be parsed client-side and summarized.</div>
+        <input id="file-input" type="file" accept=".pdf,.txt" />
+        <div style="display:flex;gap:8px;margin-top:8px;">
+          <button id="upload-btn" class="btn">Upload</button>
+          <button id="summarize-btn" class="btn">Summarize Text</button>
+        </div>
+        <div id="processing" class="text-muted" style="margin-top:8px"></div>
+
+        <div style="margin-top:12px;">
+          <div class="h1" style="font-size:16px">Summary</div>
+          <textarea id="text-input" class="input" rows="6" placeholder="Paste notes to summarize..."></textarea>
+          <div id="summary-output" class="summary" style="margin-top:8px">No summary yet.</div>
+        </div>
+      </section>
+
+      <aside class="widget">
+        <div class="h1" style="font-size:16px">Files & Study Plan</div>
+        <div id="file-list" class="file-list" style="margin-top:8px"><div class="text-muted">No files yet.</div></div>
+        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+        <div><div class="h1" style="font-size:16px">Timetable / Plan</div><div id="study-plan" class="summary" style="margin-top:8px">No plan yet.</div></div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+
+  <script type="module" src="assets/js/firebase-config.js"></script>
+  <script type="module" src="assets/js/auth.js"></script>
+  <script type="module" src="assets/js/user-panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Admin • Hackholics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">ADM</div>
+        <div>
+          <div class="h1">Admin Panel</div>
+          <div class="text-muted">Manage resources & FAQs</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="btn" href="index.html">Home</a>
+      </nav>
+    </header>
+
+    <main style="margin-top:18px;">
+      <div class="card">
+        <div class="h1">Add FAQ / Resource</div>
+        <div class="form-row" style="margin-top:10px;">
+          <input id="res-title" class="input" placeholder="Title">
+          <textarea id="res-body" class="input" rows="4" placeholder="Content"></textarea>
+          <div style="display:flex;gap:8px;">
+            <button id="res-add" class="btn">Add Resource</button>
+            <div id="res-msg" class="text-muted"></div>
+          </div>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+          <div class="h1" style="font-size:16px">Existing resources</div>
+          <div id="res-list" style="margin-top:8px" class="file-list">
+            <div class="text-muted">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="assets/js/firebase-config.js"></script>
+  <script type="module" src="assets/js/admin-panel.js"></script>
+</body>
+</html>
